@@ -80,3 +80,25 @@ function run_dfwc() {
 
 }
 run_dfwc();
+
+/**
+ * Add settings link on plugin page
+ *
+ * @since 1.0.0
+ * @param array $links an array of links related to the plugin.
+ * @return array updatead array of links related to the plugin.
+ */
+function dfwc_settings_link( $links ) {
+	$pro_link      = '<a href="https://deviodigital.com/product/delivery-fees-for-woocommerce-pro" target="_blank" style="font-weight:700;">' . __( 'Go Pro', 'dfwc' ) . '</a>';
+	$settings_link = '<a href="admin.php?page=wc-settings&tab=dfwc">' . __( 'Settings', 'dfwc' ) . '</a>';
+
+	array_unshift( $links, $settings_link );
+	if ( ! function_exists( 'dfwc_pro_all_settings' ) ) {
+		array_unshift( $links, $pro_link );
+	}
+	return $links;
+}
+
+$pluginname = plugin_basename( __FILE__ );
+
+add_filter( "plugin_action_links_$pluginname", 'dfwc_settings_link' );
