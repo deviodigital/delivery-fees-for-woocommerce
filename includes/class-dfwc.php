@@ -117,9 +117,9 @@ class DFWC {
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-dfwc-admin.php';
 
 		/**
-		 * The file responsible for defining the WooCommerce Settings.
+		 * The file responsible for defining the WooCommerce Shipping Method.
 		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/dfwc-woocommerce-settings.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/dfwc-woocommerce-shipping-method.php';
 
 		/**
 		 * The file responsible for defining the delivery fees added to WooCommerce.
