@@ -64,6 +64,18 @@ function dfwc_package_rate_override( $rates, $package ) {
 add_filter( 'woocommerce_package_rates', 'dfwc_package_rate_override', 100, 2 );
 
 /**
+ * Remove Shipping Label from Cart/Checkout.
+ *
+ * @param [type] $label
+ * @param [type] $method
+ * @return string
+ */
+function dfwc_remove_shipping_label( $label, $method ) {
+    $new_label = preg_replace( '/^.+:/', '', $label );
+    return $new_label;
+}
+
+/**
  * Change "Delivery" label to "FREE" if cost is zero.
  * 
  * @return string
