@@ -15,7 +15,7 @@
  * @wordpress-plugin
  * Plugin Name:       Delivery Fees for WooCommerce
  * Plugin URI:        https://www.deviodigital.com/delivery-fees-for-woocommerce
- * Description:       This is a short description of what the plugin does. It's displayed in the WordPress admin area.
+ * Description:       Adds a custom shipping method to WooCommerce for delivery services.
  * Version:           1.0.0
  * Author:            Devio Digital
  * Author URI:        https://www.deviodigital.com
