@@ -63,6 +63,25 @@ function dfwc_package_rate_override( $rates, $package ) {
 }
 add_filter( 'woocommerce_package_rates', 'dfwc_package_rate_override', 100, 2 );
 
+/**
+ * Change "Delivery" label to "FREE" if cost is zero.
+ * 
+ * @return string
+ * @since 1.0
+ */
+function dfwc_free_delivery_label_text( $label, $method ) {
+
+    if ( 'dfwc' === $method->method_id ) {
+        if ( $method->cost <= 0 ) {
+            $label = __( 'FREE', 'dfwc' );
+        }
+    }
+
+    return $label;
+
+}
+add_filter( 'woocommerce_cart_shipping_method_full_label', 'dfwc_free_delivery_label_text', 10, 2 );
+
     }
 
 }
