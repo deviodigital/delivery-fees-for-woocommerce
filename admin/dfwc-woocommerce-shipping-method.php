@@ -45,7 +45,7 @@ function dfwc_shipping_method() {
                     ),
                     'free_delivery' => array(
                         'title'       => __( 'Free delivery minimum', 'dfwc' ),
-                        'type'        => 'text',
+                        'type'        => 'number',
                         'description' => '',
                         'default'     => ''
                     ),
