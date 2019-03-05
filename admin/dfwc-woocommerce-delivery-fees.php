@@ -286,17 +286,20 @@ function dfwc_change_shipping_text() {
 
     global $woocommerce;
 
-    $chosen_methods          = WC()->session->get( 'chosen_shipping_methods' );
-    $chosen_shipping_no_ajax = $chosen_methods[0];
+    // Front end only.
+    if ( ! is_admin() ) {
+        $chosen_methods          = WC()->session->get( 'chosen_shipping_methods' );
+        $chosen_shipping_no_ajax = $chosen_methods[0];
 
-    if ( 0 === strpos( $chosen_shipping_no_ajax, 'dfwc' ) ) {
-        add_filter( 'gettext', 'dfwc_shipping_field_strings', 20, 3 );
-        //add_filter( 'gettext', 'dfwc_shipping_field_strings2', 20, 3 );
-        add_filter( 'gettext', 'dfwc_strings_translation', 20, 3 );
-        add_filter( 'woocommerce_shipping_package_name' , 'dfwc_delivery_text', 10, 3 );
-        add_filter( 'woocommerce_cart_shipping_method_full_label', 'dfwc_remove_shipping_label', 10, 2 );
-        add_filter( 'gettext', 'dfwc_translate_reply' );
-        add_filter( 'ngettext', 'dfwc_translate_reply' );
+        if ( 0 === strpos( $chosen_shipping_no_ajax, 'dfwc' ) ) {
+            add_filter( 'gettext', 'dfwc_shipping_field_strings', 20, 3 );
+            //add_filter( 'gettext', 'dfwc_shipping_field_strings2', 20, 3 );
+            add_filter( 'gettext', 'dfwc_strings_translation', 20, 3 );
+            add_filter( 'woocommerce_shipping_package_name' , 'dfwc_delivery_text', 10, 3 );
+            add_filter( 'woocommerce_cart_shipping_method_full_label', 'dfwc_remove_shipping_label', 10, 2 );
+            add_filter( 'gettext', 'dfwc_translate_reply' );
+            add_filter( 'ngettext', 'dfwc_translate_reply' );
+        }
     }
 }
-add_action( 'dfwc_shipping_text_translation', 'dfwc_change_shipping_text' );
+add_action( 'init', 'dfwc_change_shipping_text' );
