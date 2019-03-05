@@ -29,6 +29,9 @@ function dfwc_shipping_method() {
             }
             // Fields for the settings page.
             function init_form_fields() {
+                /**
+                 * @todo turn this into a filterable array for the Pro version.
+                 */
                 // Fields for the modal form from the Zones window.
                 $this->instance_form_fields = array(
                     'title' => array(
@@ -54,7 +57,7 @@ function dfwc_shipping_method() {
             }
 
             public function calculate_shipping( $package = array() ) {
-                //as we are using instances for the cost and the title we need to take those values from the instance_settings
+                // As we are using instances for the cost and the title we need to take those values from the instance_settings
                 $intance_settings =  $this->instance_settings;
                 // Register the rate.
                 $this->add_rate( array(
