@@ -93,7 +93,7 @@ function dfwc_settings_link( $links ) {
 	$pro_link = '<a href="https://deviodigital.com/product/delivery-fees-for-woocommerce-pro/" target="_blank" style="font-weight:700;">' . __( 'Go Pro', 'dfwc' ) . '</a>';
 
 	// Add GO PRO link.
-	if ( ! function_exists( 'dfwc_pro_all_settings' ) ) {
+	if ( ! function_exists( 'run_dfwc_pro' ) ) {
 		array_unshift( $links, $pro_link );
 	}
 
