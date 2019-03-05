@@ -18,9 +18,9 @@
  * @return float
  * @since 1.0
  */
-function divideNumber( $number, $divide_by, $max ) {
-    if( $number > $max ) {
-        return divideNumber( $number/$divide_by, $divide_by, $max );
+function dfwc_divideNumber( $number, $divide_by, $max ) {
+    if ( $number > $max ) {
+        return dfwc_divideNumber( $number/$divide_by, $divide_by, $max );
     } else {
         return $number;
     }
