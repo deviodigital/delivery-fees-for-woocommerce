@@ -29,11 +29,7 @@ function dfwc_shipping_method() {
             }
             // Fields for the settings page.
             function init_form_fields() {
-                /**
-                 * @todo turn this into a filterable array for the Pro version.
-                 */
-                // Fields for the modal form from the Zones window.
-                $this->instance_form_fields = array(
+                $dfwc_instance_form_fields = array(
                     'title' => array(
                         'title'       => __( 'Title', 'dfwc' ),
                         'type'        => 'text',
@@ -53,6 +49,9 @@ function dfwc_shipping_method() {
                         'default'     => ''
                     ),
                 );
+
+                // Fields for the modal form from the Zones window.
+                $this->instance_form_fields = apply_filters( 'dfwc_instance_form_fields', $dfwc_instance_form_fields );
                 //$this->form_fields - use this with the same array as above for setting fields for separate settings page
             }
 
