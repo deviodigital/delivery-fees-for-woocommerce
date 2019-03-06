@@ -1,4 +1,4 @@
-=== Delivery Feees for WooCommerce ===
+=== Delivery Fees for WooCommerce ===
 Contributors: deviodigital
 Donate link: https://www.deviodigital.com
 Tags: woocommerce, delivery, delivery-fees, courier
@@ -16,15 +16,13 @@ Delivery Fees for WooCommerce adds a custom shipping method to WooCommerce speci
 
 When you add the **DFWC Delivery Fees** shipping method to your shipping zone, it automatically turns your WooCommerce store's **Shipping** text into **Delivery**.
 
-Combine it with the PRO version and it will become the only WooCommerce delivery fees plugin you'll ever need!
-
 ## Built for delivery services
 
 WooCommerce lets you add *Shipping Zones* but what about companies who only offer delivery?
 
 That's where the Delivery Fees for WooCommerce plugin comes in!
 
-We know that not all businesses ship products, instead delivering them directly to customers so we created a custom WooCommerce Shipping Method to cater to delivery services like yours.
+We know that not all businesses ship products, instead delivering them directly to customers. So we created a custom WooCommerce Shipping Method to cater to delivery services like yours.
 
 ## Features
 
