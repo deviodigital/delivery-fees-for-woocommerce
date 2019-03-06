@@ -4,4 +4,6 @@ Brought to you by [Devio Digital](https://deviodigital.com)
 
 ## Custom Shipping Method for Delivery Services
 
-The official plugin release is coming soon.
+:raised_hand: **This repo is under active development**
+
+You can download the latest release from the WordPress Plugins Directory :point_right: [link](https://www.wordpress.org/plugins/delivery-fees-for-woocommerce)
