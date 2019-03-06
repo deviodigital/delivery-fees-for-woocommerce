@@ -12,7 +12,26 @@ Adds a custom shipping method to WooCommerce for delivery services.
 
 == Description ==
 
-Add a custom shipping method to WooCommerce for delivery services.
+Delivery Fees for WooCommerce adds a custom shipping method to WooCommerce specifically for delivery services.
+
+When you add the **DFWC Delivery Fees** shipping method to your shipping zone, it automatically turns your WooCommerce store's **Shipping** text into **Delivery**.
+
+Combine it with the PRO version and it will become the only WooCommerce delivery fees plugin you'll ever need!
+
+## Built for delivery services
+
+WooCommerce lets you add *Shipping Zones* but what about companies who only offer delivery?
+
+That's where the Delivery Fees for WooCommerce plugin comes in!
+
+We know that not all businesses ship products, instead delivering them directly to customers so we created a custom WooCommerce Shipping Method to cater to delivery services like yours.
+
+## Features
+
+* Unlimited shipping methods and cost rules
+* Offer free delivery with minimum order
+* Automatically change "Shipping" to "Delivery" in order details.
+* ... and more!
 
 == Installation ==
 
