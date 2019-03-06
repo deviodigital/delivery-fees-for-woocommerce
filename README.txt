@@ -20,6 +20,13 @@ Add a custom shipping method to WooCommerce for delivery services.
 2. Search for `Delivery Fees` and Install this plugin
 3. Pat yourself on the back for a job well done :)
 
+== Screenshots ==
+
+1. DFWC Delivery Fees Shipping Method options
+2. Delivery fee displayed in Checkout (changing "Shipping" to "Delivery")
+3. Customer's Order Details page with delivery fee & "Delivery Address" instead of "Shipping Address"
+4. Order details in WordPress dashboard with "Delivery" instead of "Shipping"
+
 == Changelog ==
 
 = 1.0 =
