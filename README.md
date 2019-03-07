@@ -6,4 +6,4 @@ Brought to you by [Devio Digital](https://deviodigital.com)
 
 :raised_hand: **This repo is under active development**
 
-You can download the latest release from the WordPress Plugins Directory :point_right: [link](https://www.wordpress.org/plugins/delivery-fees-for-woocommerce)
+You can download the latest stable release from the WordPress Plugins Directory :point_right: [link](https://www.wordpress.org/plugins/delivery-fees-for-woocommerce)
