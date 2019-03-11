@@ -1,4 +1,13 @@
 <?php
+/**
+ * The WooCommerce Shipping Method functionality of the plugin.
+ *
+ * @link       https://www.deviodigital.com
+ * @since      1.0.0
+ *
+ * @package    DFWC
+ * @subpackage DFWC/admin
+ */
 
 //Works with WooCommerce 3.2.6
 function dfwc_shipping_method() {
