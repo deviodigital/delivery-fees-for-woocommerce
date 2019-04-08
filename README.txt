@@ -1,7 +1,7 @@
 === Delivery Fees for WooCommerce ===
 Contributors: deviodigital
 Donate link: https://www.deviodigital.com
-Tags: woocommerce, delivery, delivery-fees, courier
+Tags: woocommerce, delivery, delivery-fees, courier, shipping
 Requires at least: 3.0.1
 Tested up to: 5.1
 Stable tag: 1.0
@@ -22,7 +22,9 @@ WooCommerce lets you add *Shipping Zones* but what about companies who only offe
 
 That's where the Delivery Fees for WooCommerce plugin comes in!
 
-We know that not all businesses ship products, instead delivering them directly to customers. So we created a custom WooCommerce Shipping Method to cater to delivery services like yours.
+We know that not all businesses ship products, instead delivering them directly to customers.
+
+So to go along with our [Delivery Drivers](https://www.wordpress.org/plugins/delivery-drivers-for-woocommerce) plugin, we created the Delivery Fees for WooCommerce plugin which adds a custom WooCommerce Shipping Method to cater to delivery services like yours.
 
 ## Features
 
@@ -30,6 +32,15 @@ We know that not all businesses ship products, instead delivering them directly 
 * Offer free delivery with minimum order
 * Automatically change "Shipping" to "Delivery" in order details.
 * ... and more!
+
+## Pro Features
+
+[Delivery Fees for WooCommerce Pro](https://deviodigital.com/product/delivery-fees-for-woocommerce-pro/) includes the following additional features:
+
+* Adds Fee types for flat fee or percentage
+* Adds Fee type for distance (per mile)
+* Adds Fee type for time (per minute)
+* Require a minimum order amount before checkout
 
 == Installation ==
 
