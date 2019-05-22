@@ -103,7 +103,10 @@ function dfwc_change_shipping_text_on_woocommerce_pages( $order_id ) {
 
     // An instance of the order.
     $order = wc_get_order( $order_id );
-    
+
+    // Create empty variable.
+    $shipping_method_id = '';
+
     // Iterating through order shipping items.
     foreach( $order->get_items( 'shipping' ) as $item_id => $shipping_item_obj ){
         $order_item_name           = $shipping_item_obj->get_name();
@@ -134,9 +137,12 @@ function dfwc_change_shipping_text_on_woocommerce_edit_order() {
 
     // An instance of the order.
     $order = wc_get_order( $_GET['post'] );
-    
+
+    // Create empty variable.
+    $shipping_method_id = '';
+
     // Iterating through order shipping items.
-    foreach( $order->get_items( 'shipping' ) as $item_id => $shipping_item_obj ){
+    foreach( $order->get_items( 'shipping' ) as $item_id => $shipping_item_obj ) {
         $order_item_name           = $shipping_item_obj->get_name();
         $order_item_type           = $shipping_item_obj->get_type();
         $shipping_method_title     = $shipping_item_obj->get_method_title();
