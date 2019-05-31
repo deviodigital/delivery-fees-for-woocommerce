@@ -115,7 +115,7 @@ function dfwc_change_shipping_text_on_woocommerce_pages( $order_id ) {
         $order_item_name           = $shipping_item_obj->get_name();
         $order_item_type           = $shipping_item_obj->get_type();
         $shipping_method_title     = $shipping_item_obj->get_method_title();
-        $shipping_method_id        = $shipping_item_obj->get_method_id(); // The method ID
+        $shipping_method_id        = $shipping_item_obj->get_method_id();
         $shipping_method_total     = $shipping_item_obj->get_total();
         $shipping_method_total_tax = $shipping_item_obj->get_total_tax();
         $shipping_method_taxes     = $shipping_item_obj->get_taxes();
@@ -132,7 +132,7 @@ add_action( 'woocommerce_view_order', 'dfwc_change_shipping_text_on_woocommerce_
 
 
 /**
- * Change "Shipping" text to "Delivery" on WC pages.
+ * Change "Shipping" text to "Delivery" on WooCommerce pages.
  * 
  * @since 1.0
  */
@@ -149,7 +149,7 @@ function dfwc_change_shipping_text_on_woocommerce_edit_order() {
         $order_item_name           = $shipping_item_obj->get_name();
         $order_item_type           = $shipping_item_obj->get_type();
         $shipping_method_title     = $shipping_item_obj->get_method_title();
-        $shipping_method_id        = $shipping_item_obj->get_method_id(); // The method ID
+        $shipping_method_id        = $shipping_item_obj->get_method_id();
         $shipping_method_total     = $shipping_item_obj->get_total();
         $shipping_method_total_tax = $shipping_item_obj->get_total_tax();
         $shipping_method_taxes     = $shipping_item_obj->get_taxes();
