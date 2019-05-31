@@ -52,6 +52,9 @@ function dfwc_package_rate_override( $rates, $package ) {
             // Get free delivery setting value.
             $free_delivery = $delivery_cost['free_delivery'];
 
+            // Filter the free delivery minimum.
+            $free_delivery = apply_filters( 'dfwc_free_delivery_minimum', $free_delivery );
+
             // If minimum order amount is met, change to free delivery.
             if ( '' !== $free_delivery && $free_delivery <= $cart_subtotal ) {
                 $rate->cost = '0';
