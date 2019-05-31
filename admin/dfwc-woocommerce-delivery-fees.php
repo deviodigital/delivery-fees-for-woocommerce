@@ -252,7 +252,7 @@ function dfwc_shipping_field_strings4( $translated_text, $text, $domain ) {
 function dfwc_strings_translation( $translated_text, $text, $domain ) {
     switch ( $translated_text ) {
     case 'Ship to a different address?' :
-        $translated_text =  __( 'Deliver to a different address?', '__x__' );
+        $translated_text =  __( 'Deliver to a different address?', 'dfwc' );
         break;
     }
     return $translated_text;
