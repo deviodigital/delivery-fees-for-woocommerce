@@ -233,7 +233,7 @@ function dfwc_shipping_field_strings3( $translated_text, $text, $domain ) {
  */
 function dfwc_shipping_field_strings4( $translated_text, $text, $domain ) {
     switch ( $translated_text ) {
-    case '                          Shipping                            ' :
+    case 'Shipping' :
         $translated_text = __( 'Delivery', 'dfwc' );
         break;
     }
