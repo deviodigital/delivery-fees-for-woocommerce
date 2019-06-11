@@ -10,23 +10,6 @@
  */
 
 /**
- * Devide number
- *
- * @param float $number
- * @param float $divide_by
- * @param float $max
- * @return float
- * @since 1.0
- */
-function dfwc_divideNumber( $number, $divide_by, $max ) {
-    if ( $number > $max ) {
-        return dfwc_divideNumber( $number/$divide_by, $divide_by, $max );
-    } else {
-        return $number;
-    }
-}
-
-/**
  * Delivery Fee Override
  *
  * @param [type] $rates
