@@ -40,7 +40,7 @@ function dfwc_package_rate_override( $rates, $package ) {
 
             // If minimum order amount is met, change to free delivery.
             if ( '' !== $free_delivery && $free_delivery <= $cart_subtotal ) {
-                $rate->cost = '0';
+                $rate->cost = apply_filters( 'dfwc_free_delivery_cost', '0' );
             }
         }
     }
