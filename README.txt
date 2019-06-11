@@ -3,8 +3,8 @@ Contributors: deviodigital
 Donate link: https://www.deviodigital.com
 Tags: woocommerce, delivery, delivery-fees, courier, shipping
 Requires at least: 3.0.1
-Tested up to: 5.2
-Stable tag: 1.0
+Tested up to: 5.2.1
+Stable tag: 1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -56,6 +56,15 @@ So to go along with our [Delivery Drivers](https://www.wordpress.org/plugins/del
 4. Order details in WordPress dashboard with "Delivery" instead of "Shipping"
 
 == Changelog ==
+
+= 1.1 =
+
+* Added `dfwc_free_delivery_minimum` filter in `admin/dfwc-woocommerce-delivery-fees.php`
+* Updated code to set default empty variables to remove notices in `admin/dfwc-woocommerce-delivery-fees.php`
+* Updated `Shipping` case for translated text in `admin/dfwc-woocommerce-delivery-fees.php`
+* Updated text strings for localization in `admin/dfwc-woocommerce-delivery-fees.php`
+* Updated `.pot` file with text strings for localization in `languages/dfwc.pot`
+* General code and inline docs updates throughout multiple files in the plugin
 
 = 1.0 =
 
