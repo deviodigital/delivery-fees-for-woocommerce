@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: Delivery Fees for WooCommerce\n"
-"POT-Creation-Date: 2019-03-05 18:12-0500\n"
-"PO-Revision-Date: 2019-03-05 18:12-0500\n"
+"POT-Creation-Date: 2019-06-11 18:38-0400\n"
+"PO-Revision-Date: 2019-06-11 18:38-0400\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -21,32 +21,32 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
-#: admin/dfwc-woocommerce-delivery-fees.php:88
+#: admin/dfwc-woocommerce-delivery-fees.php:74
 msgid "FREE"
 msgstr ""
 
-#: admin/dfwc-woocommerce-delivery-fees.php:172
+#: admin/dfwc-woocommerce-delivery-fees.php:164
 msgid "Delivery Address"
 msgstr ""
 
-#: admin/dfwc-woocommerce-delivery-fees.php:192
+#: admin/dfwc-woocommerce-delivery-fees.php:184
 msgid "Delivery:"
 msgstr ""
 
-#: admin/dfwc-woocommerce-delivery-fees.php:210
+#: admin/dfwc-woocommerce-delivery-fees.php:202
 msgid "Delivery address"
 msgstr ""
 
-#: admin/dfwc-woocommerce-delivery-fees.php:228
-#: admin/dfwc-woocommerce-shipping-method.php:37
+#: admin/dfwc-woocommerce-delivery-fees.php:220
+#: admin/dfwc-woocommerce-shipping-method.php:46
 msgid "Delivery"
 msgstr ""
 
-#: admin/dfwc-woocommerce-delivery-fees.php:246
+#: admin/dfwc-woocommerce-delivery-fees.php:238
 msgid "Deliver to a different address?"
 msgstr ""
 
-#: admin/dfwc-woocommerce-delivery-fees.php:263
+#: admin/dfwc-woocommerce-delivery-fees.php:255
 #, php-format
 msgctxt "shipping packages"
 msgid "Delivery"
@@ -54,27 +54,27 @@ msgid_plural "Delivery %d"
 msgstr[0] ""
 msgstr[1] ""
 
-#: admin/dfwc-woocommerce-shipping-method.php:10
+#: admin/dfwc-woocommerce-shipping-method.php:19
 msgid "Delivery fee"
 msgstr ""
 
-#: admin/dfwc-woocommerce-shipping-method.php:11
+#: admin/dfwc-woocommerce-shipping-method.php:20
 msgid "Add your custom delivery fee for this shipping zone"
 msgstr ""
 
-#: admin/dfwc-woocommerce-shipping-method.php:20
+#: admin/dfwc-woocommerce-shipping-method.php:29
 msgid "DFWC Delivery Fees"
 msgstr ""
 
-#: admin/dfwc-woocommerce-shipping-method.php:34
+#: admin/dfwc-woocommerce-shipping-method.php:43
 msgid "Title"
 msgstr ""
 
-#: admin/dfwc-woocommerce-shipping-method.php:40
+#: admin/dfwc-woocommerce-shipping-method.php:49
 msgid "Fee"
 msgstr ""
 
-#: admin/dfwc-woocommerce-shipping-method.php:46
+#: admin/dfwc-woocommerce-shipping-method.php:55
 msgid "Free delivery minimum"
 msgstr ""
 
