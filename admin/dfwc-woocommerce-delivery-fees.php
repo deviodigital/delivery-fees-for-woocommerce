@@ -295,3 +295,16 @@ function dfwc_change_shipping_text() {
     }
 }
 add_action( 'init', 'dfwc_change_shipping_text' );
+
+/**
+ * Translate 'Ship to' text on WooCommerce Edit Orders screen
+ *
+ * @param string $translated
+ * @return void
+ */
+function dfwc_translate_reply_ship_to( $translated ) {
+	$translated = str_ireplace( 'Ship to', 'Deliver to', $translated );
+	return $translated;
+}
+add_filter( 'gettext', 'dfwc_translate_reply_ship_to' );
+add_filter( 'ngettext', 'dfwc_translate_reply_ship_to' );
