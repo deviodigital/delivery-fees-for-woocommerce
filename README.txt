@@ -42,6 +42,18 @@ So to go along with our [Delivery Drivers](https://www.wordpress.org/plugins/del
 * Adds Fee type for time (per minute)
 * Require a minimum order amount before checkout
 
+### Delivery Times for WooCommerce
+
+Our newest plugin gives you a highly customizable way for your customers to select a delivery date and time during checkout.
+
+Learn more at [Delivery Times for WooCommerce](https://www.wordpress.org/plugins/delivery-times-for-woocommerce)
+
+### Delivery Drivers for WooCommerce
+
+This plugin allows offers better driver management for all delivery services who use WooCommerce, streamlining your workflow and increasing your bottom line.
+
+Learn more at [Delivery Drivers for WooCommerce](https://www.wordpress.org/plugins/delivery-drivers-for-woocommerce)
+
 == Installation ==
 
 1. In your dashboard, go to `Plugins -> Add New`
