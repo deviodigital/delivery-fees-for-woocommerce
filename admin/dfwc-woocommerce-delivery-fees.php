@@ -106,8 +106,8 @@ function dfwc_change_shipping_text_on_woocommerce_pages( $order_id ) {
 
     // If DFWC shipping method is set.
     if ( 'dfwc' === $shipping_method_id ) {
-        add_filter( 'gettext', 'dfwc_shipping_field_strings3', 20, 3 );
-        add_filter( 'gettext', 'dfwc_shipping_field_strings2', 20, 3 );
+        add_filter( 'gettext', 'dfwc_shipping_field_strings3', 99, 3 );
+        add_filter( 'gettext', 'dfwc_shipping_field_strings2', 99, 3 );
     }
 }
 add_action( 'woocommerce_thankyou', 'dfwc_change_shipping_text_on_woocommerce_pages' );
@@ -141,9 +141,9 @@ function dfwc_change_shipping_text_on_woocommerce_edit_order() {
     if ( is_admin() ) {
         // If DFWC shipping method is set.
         if ( 'dfwc' === $shipping_method_id ) {
-            add_filter( 'gettext', 'dfwc_shipping_field_strings4', 20, 3 );
-            add_filter( 'gettext', 'dfwc_shipping_field_strings3', 20, 3 );
-            add_filter( 'gettext', 'dfwc_shipping_field_strings2', 20, 3 );
+            add_filter( 'gettext', 'dfwc_shipping_field_strings4', 99, 3 );
+            add_filter( 'gettext', 'dfwc_shipping_field_strings3', 99, 3 );
+            add_filter( 'gettext', 'dfwc_shipping_field_strings2', 99, 3 );
         }
     }
 }
@@ -284,17 +284,17 @@ function dfwc_change_shipping_text() {
         $chosen_shipping_no_ajax = $chosen_methods[0];
 
         if ( 0 === strpos( $chosen_shipping_no_ajax, 'dfwc' ) ) {
-            add_filter( 'gettext', 'dfwc_shipping_field_strings', 20, 3 );
-            //add_filter( 'gettext', 'dfwc_shipping_field_strings2', 20, 3 );
-            add_filter( 'gettext', 'dfwc_strings_translation', 20, 3 );
-            add_filter( 'woocommerce_shipping_package_name' , 'dfwc_delivery_text', 10, 3 );
-            add_filter( 'woocommerce_cart_shipping_method_full_label', 'dfwc_remove_shipping_label', 10, 2 );
+            add_filter( 'gettext', 'dfwc_shipping_field_strings', 99, 3 );
+            add_filter( 'gettext', 'dfwc_shipping_field_strings2', 99, 3 );
+            add_filter( 'gettext', 'dfwc_strings_translation', 99, 3 );
+            add_filter( 'woocommerce_shipping_package_name' , 'dfwc_delivery_text', 99, 3 );
+            add_filter( 'woocommerce_cart_shipping_method_full_label', 'dfwc_remove_shipping_label', 99, 2 );
             add_filter( 'gettext', 'dfwc_translate_reply' );
             add_filter( 'ngettext', 'dfwc_translate_reply' );
         }
     }
 }
-add_action( 'init', 'dfwc_change_shipping_text' );
+add_action( 'init', 'dfwc_change_shipping_text', 99 );
 
 /**
  * Translate 'Ship to' text on WooCommerce Edit Orders screen
