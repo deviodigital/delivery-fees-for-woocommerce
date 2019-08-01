@@ -112,6 +112,11 @@ class DFWC {
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-dfwc-i18n.php';
 
 		/**
+		 * The file responsible for defining all helper functions.
+		 */
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/dfwc-functions.php';
+
+		/**
 		 * The class responsible for defining all actions that occur in the admin area.
 		 */
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-dfwc-admin.php';
