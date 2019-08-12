@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: Delivery Fees for WooCommerce\n"
-"POT-Creation-Date: 2019-06-11 18:38-0400\n"
-"PO-Revision-Date: 2019-06-11 18:38-0400\n"
+"POT-Creation-Date: 2019-08-12 19:16-0400\n"
+"PO-Revision-Date: 2019-08-12 19:15-0400\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -78,7 +78,11 @@ msgstr ""
 msgid "Free delivery minimum"
 msgstr ""
 
-#: delivery-fees-for-woocommerce.php:93
+#: delivery-fees-for-woocommerce.php:87
+msgid "Settings"
+msgstr ""
+
+#: delivery-fees-for-woocommerce.php:89
 msgid "Go Pro"
 msgstr ""
 
