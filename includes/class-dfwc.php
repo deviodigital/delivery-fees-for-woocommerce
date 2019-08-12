@@ -70,7 +70,7 @@ class DFWC {
 		if ( defined( 'DFWC_VERSION' ) ) {
 			$this->version = DFWC_VERSION;
 		} else {
-			$this->version = '1.1';
+			$this->version = '1.2';
 		}
 		$this->plugin_name = 'dfwc';
 

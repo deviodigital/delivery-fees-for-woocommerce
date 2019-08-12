@@ -1,10 +1,10 @@
 === Delivery Fees for WooCommerce ===
 Contributors: deviodigital
 Donate link: https://www.deviodigital.com
-Tags: woocommerce, delivery, delivery-fees, courier, shipping
+Tags: woocommerce, delivery, delivery-fees, courier, shipping, shipping-fees
 Requires at least: 3.0.1
-Tested up to: 5.2.1
-Stable tag: 1.1
+Tested up to: 5.2.2
+Stable tag: 1.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -57,7 +57,7 @@ Learn more at [Delivery Drivers for WooCommerce](https://www.wordpress.org/plugi
 == Installation ==
 
 1. In your dashboard, go to `Plugins -> Add New`
-2. Search for `Delivery Fees` and Install this plugin
+2. Search for `Delivery Fees` and install this plugin
 3. Pat yourself on the back for a job well done :)
 
 == Screenshots ==
@@ -68,6 +68,15 @@ Learn more at [Delivery Drivers for WooCommerce](https://www.wordpress.org/plugi
 4. Order details in WordPress dashboard with "Delivery" instead of "Shipping"
 
 == Changelog ==
+
+= 1.2 =
+
+* Added helper functions file and `is_rest` function in `includes/dfwc-functions.php`
+* Added a 'Settings' link on the All Plugins page in `delivery-fees-for-woocommerce.php`
+* Updated 'Ship to' text on Edit Orders screen for translation in `admin/dfwc-woocommerce-delivery-fees.php`
+* Updated text translation filter priorities in `admin/dfwc-woocommerce-delivery-fees.php`
+* Updated change shipping text function to not run in_admin and in_rest in `admin/dfwc-woocommerce-delivery-fees.php`
+* Updated `.pot` file with text strings for localization in `languages/dfwc.pot`
 
 = 1.1 =
 
