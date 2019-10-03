@@ -95,13 +95,7 @@ function dfwc_change_shipping_text_on_woocommerce_pages( $order_id ) {
 
     // Iterating through order shipping items.
     foreach( $order->get_items( 'shipping' ) as $item_id => $shipping_item_obj ){
-        $order_item_name           = $shipping_item_obj->get_name();
-        $order_item_type           = $shipping_item_obj->get_type();
-        $shipping_method_title     = $shipping_item_obj->get_method_title();
-        $shipping_method_id        = $shipping_item_obj->get_method_id();
-        $shipping_method_total     = $shipping_item_obj->get_total();
-        $shipping_method_total_tax = $shipping_item_obj->get_total_tax();
-        $shipping_method_taxes     = $shipping_item_obj->get_taxes();
+        $shipping_method_id = $shipping_item_obj->get_method_id();
     }
 
     // If DFWC shipping method is set.
@@ -129,13 +123,7 @@ function dfwc_change_shipping_text_on_woocommerce_edit_order() {
 
     // Iterating through order shipping items.
     foreach( $order->get_items( 'shipping' ) as $item_id => $shipping_item_obj ) {
-        $order_item_name           = $shipping_item_obj->get_name();
-        $order_item_type           = $shipping_item_obj->get_type();
-        $shipping_method_title     = $shipping_item_obj->get_method_title();
-        $shipping_method_id        = $shipping_item_obj->get_method_id();
-        $shipping_method_total     = $shipping_item_obj->get_total();
-        $shipping_method_total_tax = $shipping_item_obj->get_total_tax();
-        $shipping_method_taxes     = $shipping_item_obj->get_taxes();
+        $shipping_method_id = $shipping_item_obj->get_method_id();
     }
 
     if ( is_admin() ) {
@@ -246,13 +234,13 @@ function dfwc_strings_translation( $translated_text, $text, $domain ) {
  * Function to replace shipping text to delivery text
  *
  * @param $package_name
- * @param $i
+ * @param $num
  * @param $package
  * @return string
  * @since 1.0
  */
-function dfwc_delivery_text( $package_name, $i, $package ) {
-    return sprintf( _nx( 'Delivery', 'Delivery %d', ( $i + 1 ), 'shipping packages', 'dfwc' ), ( $i + 1 ) );
+function dfwc_delivery_text( $package_name, $num, $package ) {
+    return sprintf( _nx( 'Delivery', 'Delivery %d', ( $num + 1 ), 'shipping packages', 'dfwc' ), ( $num + 1 ) );
 }
 
 /**
@@ -296,8 +284,6 @@ function dfwc_change_shipping_text() {
             } else {
                 // Do nothing.
             }
-        } else {
-            // Do nothing.
         }
     }
 }
