@@ -17,7 +17,7 @@
  * @return void
  * @since 1.0
  */
-function dfwc_package_rate_override( $rates, $package ) {
+function dfwc_package_rate_override( $rates ) {
 
     global $woocommerce;
 
@@ -47,7 +47,7 @@ function dfwc_package_rate_override( $rates, $package ) {
 
     return $rates;
 }
-add_filter( 'woocommerce_package_rates', 'dfwc_package_rate_override', 100, 2 );
+add_filter( 'woocommerce_package_rates', 'dfwc_package_rate_override', 100, 1 );
 
 /**
  * Remove Shipping Label from Cart/Checkout.
@@ -100,8 +100,8 @@ function dfwc_change_shipping_text_on_woocommerce_pages( $order_id ) {
 
     // If DFWC shipping method is set.
     if ( 'dfwc' === $shipping_method_id ) {
-        add_filter( 'gettext', 'dfwc_shipping_field_strings3', 99, 3 );
-        add_filter( 'gettext', 'dfwc_shipping_field_strings2', 99, 3 );
+        add_filter( 'gettext', 'dfwc_shipping_field_strings3', 99, 2 );
+        add_filter( 'gettext', 'dfwc_shipping_field_strings2', 99, 2 );
     }
 }
 add_action( 'woocommerce_thankyou', 'dfwc_change_shipping_text_on_woocommerce_pages' );
@@ -129,9 +129,9 @@ function dfwc_change_shipping_text_on_woocommerce_edit_order() {
     if ( is_admin() ) {
         // If DFWC shipping method is set.
         if ( 'dfwc' === $shipping_method_id ) {
-            add_filter( 'gettext', 'dfwc_shipping_field_strings4', 99, 3 );
-            add_filter( 'gettext', 'dfwc_shipping_field_strings3', 99, 3 );
-            add_filter( 'gettext', 'dfwc_shipping_field_strings2', 99, 3 );
+            add_filter( 'gettext', 'dfwc_shipping_field_strings4', 99, 2 );
+            add_filter( 'gettext', 'dfwc_shipping_field_strings3', 99, 2 );
+            add_filter( 'gettext', 'dfwc_shipping_field_strings2', 99, 2 );
         }
     }
 }
@@ -142,11 +142,10 @@ add_action( 'woocommerce_after_order_itemmeta', 'dfwc_change_shipping_text_on_wo
  *
  * @param [type] $translated_text
  * @param [type] $text
- * @param [type] $domain
  * @return void
  * @since 1.0
  */
-function dfwc_shipping_field_strings( $translated_text, $text, $domain ) {
+function dfwc_shipping_field_strings( $translated_text, $text ) {
     switch ( $translated_text ) {
     case 'Shipping Address' :
         $translated_text = __( 'Delivery Address', 'dfwc' );
@@ -160,13 +159,10 @@ function dfwc_shipping_field_strings( $translated_text, $text, $domain ) {
  *
  * @param string $translated_text
  * @param string $text
- * @param string $domain
  * @return string
  * @since 1.0
  */
-function dfwc_shipping_field_strings2( $translated_text, $text, $domain ) {
-    global $post;
-
+function dfwc_shipping_field_strings2( $translated_text, $text ) {
     switch ( $translated_text ) {
         case 'Shipping:' :
         $translated_text = __( 'Delivery:', 'dfwc' );
@@ -180,11 +176,10 @@ function dfwc_shipping_field_strings2( $translated_text, $text, $domain ) {
  *
  * @param [type] $translated_text
  * @param [type] $text
- * @param [type] $domain
  * @return void
  * @since 1.0
  */
-function dfwc_shipping_field_strings3( $translated_text, $text, $domain ) {
+function dfwc_shipping_field_strings3( $translated_text, $text ) {
     switch ( $translated_text ) {
     case 'Shipping address' :
         $translated_text = __( 'Delivery address', 'dfwc' );
@@ -198,11 +193,10 @@ function dfwc_shipping_field_strings3( $translated_text, $text, $domain ) {
  *
  * @param [type] $translated_text
  * @param [type] $text
- * @param [type] $domain
  * @return void
  * @since 1.0
  */
-function dfwc_shipping_field_strings4( $translated_text, $text, $domain ) {
+function dfwc_shipping_field_strings4( $translated_text, $text ) {
     switch ( $translated_text ) {
     case 'Shipping' :
         $translated_text = __( 'Delivery', 'dfwc' );
@@ -216,11 +210,10 @@ function dfwc_shipping_field_strings4( $translated_text, $text, $domain ) {
  *
  * @param string $translated_text
  * @param string $text
- * @param string $domain
  * @return string
  * @since 1.0
  */
-function dfwc_strings_translation( $translated_text, $text, $domain ) {
+function dfwc_strings_translation( $translated_text, $text ) {
     switch ( $translated_text ) {
     case 'Ship to a different address?' :
         $translated_text =  __( 'Deliver to a different address?', 'dfwc' );
@@ -274,9 +267,9 @@ function dfwc_change_shipping_text() {
         if ( FALSE != $chosen_methods[0] ) {
             // Translation for DFWC shipping method.
             if ( 'dfwc' == $chosen_methods[0] ) {
-                add_filter( 'gettext', 'dfwc_shipping_field_strings', 99, 3 );
-                add_filter( 'gettext', 'dfwc_shipping_field_strings2', 99, 3 );
-                add_filter( 'gettext', 'dfwc_strings_translation', 99, 3 );
+                add_filter( 'gettext', 'dfwc_shipping_field_strings', 99, 2 );
+                add_filter( 'gettext', 'dfwc_shipping_field_strings2', 99, 2 );
+                add_filter( 'gettext', 'dfwc_strings_translation', 99, 2 );
                 add_filter( 'woocommerce_shipping_package_name' , 'dfwc_delivery_text', 99, 3 );
                 add_filter( 'woocommerce_cart_shipping_method_full_label', 'dfwc_remove_shipping_label', 99, 2 );
                 add_filter( 'gettext', 'dfwc_translate_reply' );
