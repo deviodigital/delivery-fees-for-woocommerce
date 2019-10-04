@@ -271,7 +271,7 @@ function dfwc_change_shipping_text() {
         // Chosen shipping method.
         $chosen_methods = WC()->session->get( 'chosen_shipping_methods' );
         // Check chosen shipping method.
-        if ( FALSE == $chosen_methods[0] ) {
+        if ( FALSE != $chosen_methods[0] ) {
             // Translation for DFWC shipping method.
             if ( 'dfwc' == $chosen_methods[0] ) {
                 add_filter( 'gettext', 'dfwc_shipping_field_strings', 99, 3 );
