@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.3
+
+*   Bugfix to change Shipping text to Delivery text (bug introduced in v1.2) in `admin/dfwc-woocommerce-delivery-fees.php`
+*   Updated to hide "Settings" link except if DFWC Pro is active in `delivery-fees-for-woocommerce.php`
+*   Updated and removed public js and css files from loading in `public/class-dfwc-public.php`
+*   Updated `.pot` file with text strings for localization in `languages/dfwc.pot`
+*   General code cleanup throughout multiple files in the plugin
+
 ## 1.2
 
 *   Added helper functions file and `is_rest` function in `includes/dfwc-functions.php`
