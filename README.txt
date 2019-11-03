@@ -28,19 +28,19 @@ So to go along with our [Delivery Drivers](https://www.wordpress.org/plugins/del
 
 ## Features
 
-* Unlimited shipping methods and cost rules
-* Offer free delivery with minimum order
-* Automatically change "Shipping" to "Delivery" in order details.
-* ... and more!
+*   Unlimited shipping methods and cost rules
+*   Offer free delivery with minimum order
+*   Automatically change "Shipping" to "Delivery" in order details.
+*   ... and more!
 
 ## Pro Features
 
 [Delivery Fees for WooCommerce Pro](https://deviodigital.com/product/delivery-fees-for-woocommerce-pro/) includes the following additional features:
 
-* Adds Fee types for flat fee or percentage
-* Adds Fee type for distance (per mile)
-* Adds Fee type for time (per minute)
-* Require a minimum order amount before checkout
+*   Adds Fee types for flat fee or percentage
+*   Adds Fee type for distance (per mile)
+*   Adds Fee type for time (per minute)
+*   Require a minimum order amount before checkout
 
 ### Delivery Times for WooCommerce
 
