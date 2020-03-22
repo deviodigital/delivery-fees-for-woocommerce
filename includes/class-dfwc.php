@@ -69,7 +69,7 @@ class DFWC {
 	public function __construct() {
 
 		$this->plugin_name = 'dfwc';
-		$this->version     = '1.3';
+		$this->version     = '1.3.1';
 
 		if ( defined( 'DFWC_VERSION' ) ) {
 			$this->version = DFWC_VERSION;

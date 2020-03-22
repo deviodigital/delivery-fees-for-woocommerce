@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.3.1
+*   General code and inline docs updates throughout multiple files in the plugin
+
 ## 1.3
 
 *   Bugfix to change Shipping text to Delivery text (bug introduced in v1.2) in `admin/dfwc-woocommerce-delivery-fees.php`
