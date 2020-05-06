@@ -18,7 +18,7 @@
  *
  * @package    DFWC
  * @subpackage DFWC/admin
- * @author     Devio Digital <deviodigital@gmail.com>
+ * @author     Devio Digital <contact@deviodigital.com>
  */
 class DFWC_Admin {
 
