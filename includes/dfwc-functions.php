@@ -36,4 +36,3 @@ if ( ! function_exists( 'is_rest' ) ) {
         return strpos( $current_url['path'], $rest_url['path'], 0 ) === 0;
     }
 }
-

@@ -82,7 +82,7 @@ run_dfwc();
  */
 function dfwc_settings_link( $links ) {
 	// Get Settings link.
-	$settings_link = '<a href="admin.php?page=wc-settings&tab=dfwc">' . esc_attr__( 'Settings', 'ddwc' ) . '</a>';
+	$settings_link = '<a href="admin.php?page=wc-settings&tab=dfwc">' . esc_attr__( 'Settings', 'dfwc' ) . '</a>';
 	// Get GO PRO link.
 	$pro_link = '<a href="https://deviodigital.com/product/delivery-fees-for-woocommerce-pro/" target="_blank" style="font-weight:700;">' . esc_attr__( 'Go Pro', 'dfwc' ) . '</a>';
 
@@ -100,3 +100,40 @@ function dfwc_settings_link( $links ) {
 $pluginname = plugin_basename( __FILE__ );
 
 add_filter( "plugin_action_links_$pluginname", 'dfwc_settings_link' );
+
+/**
+ * Check DFWC Pro version number.
+ *
+ * If the DFWC Pro version number is less than what's defined below, there will
+ * be a notice added to the admin screen letting the user know there's a new
+ * version of the DFWC Pro plugin available.
+ *
+ * @since 1.4
+ */
+function dfwc_check_pro_version() {
+	// Only run if DFWC Pro is active.
+	if ( function_exists( 'dfwc_pro_all_settings' ) ) {
+		// Check if DFWC Pro version is defined.
+		if ( ! defined( 'DFWC_PRO_VERSION' ) ) {
+			define( 'DFWC_PRO_VERSION', 0 ); // default to zero.
+		}
+		// Set pro version number.
+		$pro_version = DFWC_PRO_VERSION;
+		if ( '0' == $pro_version || $pro_version < '1.2' ) {
+			add_action( 'admin_notices', 'dfwc_update_dfwc_pro_notice' );
+		}
+	}
+}
+add_action( 'admin_init', 'dfwc_check_pro_version' );
+
+/**
+ * Error notice - Runs if DFWC Pro is out of date.
+ *
+ * @see dfwc_check_pro_version()
+ * @since 2.9
+ */
+function dfwc_update_dfwc_pro_notice() {
+	$dfwc_orders = '<a href="https://www.deviodigital.com/my-account/orders/" target="_blank">' . __( 'Orders', 'dfwc' ) . '</a>';
+	$error       = sprintf( esc_html__( 'There is a new version of DFWC Pro available. Download your copy from the %1$s page on Devio Digital.', 'dfwc' ), $dfwc_orders );
+	echo '<div class="notice notice-info"><p>' . $error . '</p></div>';
+}

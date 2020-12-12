@@ -76,7 +76,6 @@ function dfwc_free_delivery_label_text( $label, $method ) {
     }
 
     return $label;
-
 }
 add_filter( 'woocommerce_cart_shipping_method_full_label', 'dfwc_free_delivery_label_text', 10, 2 );
 
