@@ -9,7 +9,11 @@
  * @subpackage DFWC/admin
  */
 
-//Works with WooCommerce 3.2.6
+/**
+ * Add the DFWC Shipping Method
+ * 
+ * @return void
+ */
 function dfwc_shipping_method() {
     if ( ! class_exists( 'WC_DFWC_Shipping_Method' ) ) {
         class WC_DFWC_Shipping_Method extends WC_Shipping_Method {
@@ -63,7 +67,7 @@ function dfwc_shipping_method() {
                 $this->instance_form_fields = apply_filters( 'dfwc_instance_form_fields', $dfwc_instance_fields );
                 //$this->form_fields - use this with the same array as above for setting fields for separate settings page
             }
-
+            // Calculate shipping.
             public function calculate_shipping( $package = array() ) {
                 // As we are using instances for the cost and the title we need to take those values from the instance_settings
                 $intance_settings =  $this->instance_settings;
@@ -78,7 +82,7 @@ function dfwc_shipping_method() {
             }
         }
     }
-    //add your shipping method to WooCommers list of Shipping methods
+    // Add your shipping method to WooCommers list of Shipping methods
     function add_dfwc_shipping_method( $methods ) {
         $methods['dfwc'] = 'WC_DFWC_Shipping_Method';
         return $methods;
