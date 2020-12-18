@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.3.2
+*   Added DFWC Pro version check with notice displayed if it's outdated in `delivery-fees-for-woocommerce.php`
+*   Bugfix fatal error in backend due to WC session data being called but not found in `admin/dfwc-woocommerce-delivery-fees.php`
+*   General code and inline docs updates throughout multiple files in the plugin
+
 ## 1.3.1
 *   General code and inline docs updates throughout multiple files in the plugin
 
