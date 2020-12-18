@@ -256,8 +256,8 @@ function dfwc_change_shipping_text() {
 
     global $woocommerce;
 
-    // Front end only.
-    if ( ! is_rest() && ! is_admin() ) {
+    // Front end only with an active WooCommerce session.
+    if ( ! is_rest() && ! is_admin() && null != WC()->session ) {
         // Chosen shipping method.
         $chosen_methods = WC()->session->get( 'chosen_shipping_methods' );
         // Check chosen shipping method.
@@ -271,8 +271,6 @@ function dfwc_change_shipping_text() {
                 add_filter( 'woocommerce_cart_shipping_method_full_label', 'dfwc_remove_shipping_label', 99, 2 );
                 add_filter( 'gettext', 'dfwc_translate_reply' );
                 add_filter( 'ngettext', 'dfwc_translate_reply' );
-            } else {
-                // Do nothing.
             }
         }
     }
