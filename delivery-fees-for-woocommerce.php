@@ -119,7 +119,9 @@ function dfwc_check_pro_version() {
 		}
 		// Set pro version number.
 		$pro_version = DFWC_PRO_VERSION;
+		// Check pro version number.
 		if ( '0' == $pro_version || $pro_version < '1.2' ) {
+			// Add DFWC Pro version upgrade notice to admin notices.
 			add_action( 'admin_notices', 'dfwc_update_dfwc_pro_notice' );
 		}
 	}
