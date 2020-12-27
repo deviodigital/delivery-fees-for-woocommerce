@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Project-Id-Version: Delivery Fees for WooCommerce\n"
-"POT-Creation-Date: 2020-12-27 10:52-0500\n"
-"PO-Revision-Date: 2020-12-27 14:07-0500\n"
+"POT-Creation-Date: 2020-12-27 14:21-0500\n"
+"PO-Revision-Date: 2020-12-27 14:21-0500\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -52,7 +52,7 @@ msgctxt "shipping packages"
 msgid "Delivery"
 msgid_plural "Delivery %d"
 msgstr[0] "Entrega"
-msgstr[1] ""
+msgstr[1] "Entrega %d"
 
 #: admin/dfwc-woocommerce-shipping-method.php:23
 msgid "Delivery Fees"
@@ -64,7 +64,7 @@ msgstr "Agregue su tarifa de envío personalizado para esta zona de envío"
 
 #: admin/dfwc-woocommerce-shipping-method.php:33
 msgid "DFWC Delivery Fees"
-msgstr "Tarifas de envío de DFWC"
+msgstr "Tasas de entrega de DFWC"
 
 #: admin/dfwc-woocommerce-shipping-method.php:47
 msgid "Title"
