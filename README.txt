@@ -4,7 +4,7 @@ Donate link: https://www.deviodigital.com
 Tags: woocommerce, delivery, delivery-fees, courier, shipping, shipping-fees
 Requires at least: 3.0.1
 Tested up to: 5.6
-Stable tag: 1.3.2
+Stable tag: 1.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -68,6 +68,13 @@ Learn more at [Delivery Drivers for WooCommerce](https://www.wordpress.org/plugi
 4. Order details in WordPress dashboard with "Delivery" instead of "Shipping"
 
 == Changelog ==
+
+= 1.4 =
+*   Added new Spanish translation in `languages/dfwc-es_ES.pot`
+*   Added new French translation in `languages/dfwc-fr_FR.pot`
+*   Added new Italian translation in `languages/dfwc-it_IT.pot`
+*   Updated text strings for localization in `languages/dfwc.pot`
+*   General code cleanup in various areas throughout the plugin
 
 = 1.3.2 =
 *   Added DFWC Pro version check with notice displayed if it's outdated in `delivery-fees-for-woocommerce.php`

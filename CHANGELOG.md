@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.4
+*   Added new Spanish translation in `languages/dfwc-es_ES.pot`
+*   Added new French translation in `languages/dfwc-fr_FR.pot`
+*   Added new Italian translation in `languages/dfwc-it_IT.pot`
+*   Updated text strings for localization in `languages/dfwc.pot`
+*   General code cleanup in various areas throughout the plugin
+
 ## 1.3.2
 *   Added DFWC Pro version check with notice displayed if it's outdated in `delivery-fees-for-woocommerce.php`
 *   Bugfix fatal error in backend due to WC session data being called but not found in `admin/dfwc-woocommerce-delivery-fees.php`
