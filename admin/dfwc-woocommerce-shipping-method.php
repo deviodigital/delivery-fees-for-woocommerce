@@ -20,8 +20,8 @@ function dfwc_shipping_method() {
             public function __construct( $instance_id = 0 ) {
                 $this->instance_id 	      = absint( $instance_id );
                 $this->id                 = 'dfwc'; //this is the id of our shipping method
-                $this->method_title       = esc_attr__( 'Delivery Fees', 'dfwc' );
-                $this->method_description = esc_attr__( 'Add your custom delivery fee for this shipping zone', 'dfwc' );
+                $this->method_title       = esc_attr__( 'Delivery Fees', 'delivery-fees-for-woocommerce' );
+                $this->method_description = esc_attr__( 'Add your custom delivery fee for this shipping zone', 'delivery-fees-for-woocommerce' );
                 // Add to shipping zones list.
                 $this->supports = array(
                     'shipping-zones',
@@ -30,7 +30,7 @@ function dfwc_shipping_method() {
                     'instance-settings-modal',
                 );
                 // Make it always enabled.
-                $this->title = esc_attr__( 'DFWC Delivery Fees', 'dfwc' );
+                $this->title = esc_attr__( 'DFWC Delivery Fees', 'delivery-fees-for-woocommerce' );
                 $this->init();
             }
             function init() {
@@ -44,19 +44,19 @@ function dfwc_shipping_method() {
             function init_form_fields() {
                 $dfwc_instance_fields = array(
                     'title' => array(
-                        'title'       => esc_attr__( 'Title', 'dfwc' ),
+                        'title'       => esc_attr__( 'Title', 'delivery-fees-for-woocommerce' ),
                         'type'        => 'text',
                         'description' => '',
-                        'default'     => esc_attr__( 'Delivery', 'dfwc' )
+                        'default'     => esc_attr__( 'Delivery', 'delivery-fees-for-woocommerce' )
                     ),
                     'cost' => array(
-                        'title'       => esc_attr__( 'Fee', 'dfwc' ),
+                        'title'       => esc_attr__( 'Fee', 'delivery-fees-for-woocommerce' ),
                         'type'        => 'number',
                         'description' => '',
                         'default'     => 0
                     ),
                     'free_delivery' => array(
-                        'title'       => esc_attr__( 'Free delivery minimum', 'dfwc' ),
+                        'title'       => esc_attr__( 'Free delivery minimum', 'delivery-fees-for-woocommerce' ),
                         'type'        => 'number',
                         'description' => '',
                         'default'     => ''

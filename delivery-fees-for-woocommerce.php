@@ -15,7 +15,7 @@
  * Author URI:        https://www.deviodigital.com
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
- * Text Domain:       dfwc
+ * Text Domain:       delivery-fees-for-woocommerce
  * Domain Path:       /languages
  */
 
@@ -82,9 +82,9 @@ run_dfwc();
  */
 function dfwc_settings_link( $links ) {
 	// Get Settings link.
-	$settings_link = '<a href="admin.php?page=wc-settings&tab=dfwc">' . esc_attr__( 'Settings', 'dfwc' ) . '</a>';
+	$settings_link = '<a href="admin.php?page=wc-settings&tab=dfwc">' . esc_attr__( 'Settings', 'delivery-fees-for-woocommerce' ) . '</a>';
 	// Get GO PRO link.
-	$pro_link = '<a href="https://deviodigital.com/product/delivery-fees-for-woocommerce-pro/" target="_blank" style="font-weight:700;">' . esc_attr__( 'Go Pro', 'dfwc' ) . '</a>';
+	$pro_link = '<a href="https://deviodigital.com/product/delivery-fees-for-woocommerce-pro/" target="_blank" style="font-weight:700;">' . esc_attr__( 'Go Pro', 'delivery-fees-for-woocommerce' ) . '</a>';
 
 	// Add GO PRO link.
 	if ( ! function_exists( 'run_dfwc_pro' ) ) {
@@ -135,7 +135,7 @@ add_action( 'admin_init', 'dfwc_check_pro_version' );
  * @since 2.9
  */
 function dfwc_update_dfwc_pro_notice() {
-	$dfwc_orders = '<a href="https://www.deviodigital.com/my-account/orders/" target="_blank">' . __( 'Orders', 'dfwc' ) . '</a>';
-	$error       = sprintf( esc_html__( 'There is a new version of DFWC Pro available. Download your copy from the %1$s page on Devio Digital.', 'dfwc' ), $dfwc_orders );
+	$dfwc_orders = '<a href="https://www.deviodigital.com/my-account/orders/" target="_blank">' . __( 'Orders', 'delivery-fees-for-woocommerce' ) . '</a>';
+	$error       = sprintf( esc_html__( 'There is a new version of DFWC Pro available. Download your copy from the %1$s page on Devio Digital.', 'delivery-fees-for-woocommerce' ), $dfwc_orders );
 	echo '<div class="notice notice-info"><p>' . $error . '</p></div>';
 }

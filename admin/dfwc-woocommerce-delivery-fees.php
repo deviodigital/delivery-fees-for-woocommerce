@@ -70,7 +70,7 @@ function dfwc_free_delivery_label_text( $label, $method ) {
 
     // Update the label?
     if ( 'dfwc' === $method->method_id && $method->cost <= 0 ) {
-        $label = __( 'FREE', 'dfwc' );
+        $label = __( 'FREE', 'delivery-fees-for-woocommerce' );
     }
 
     return $label;
@@ -145,7 +145,7 @@ add_action( 'woocommerce_after_order_itemmeta', 'dfwc_change_shipping_text_on_wo
 function dfwc_shipping_field_strings( $translated_text, $text ) {
     switch ( $translated_text ) {
     case 'Shipping Address' :
-        $translated_text = __( 'Delivery Address', 'dfwc' );
+        $translated_text = __( 'Delivery Address', 'delivery-fees-for-woocommerce' );
         break;
     }
     return $translated_text;
@@ -162,7 +162,7 @@ function dfwc_shipping_field_strings( $translated_text, $text ) {
 function dfwc_shipping_field_strings2( $translated_text, $text ) {
     switch ( $translated_text ) {
         case 'Shipping:' :
-        $translated_text = __( 'Delivery:', 'dfwc' );
+        $translated_text = __( 'Delivery:', 'delivery-fees-for-woocommerce' );
         break;
     }
     return $translated_text;
@@ -179,7 +179,7 @@ function dfwc_shipping_field_strings2( $translated_text, $text ) {
 function dfwc_shipping_field_strings3( $translated_text, $text ) {
     switch ( $translated_text ) {
     case 'Shipping address' :
-        $translated_text = __( 'Delivery address', 'dfwc' );
+        $translated_text = __( 'Delivery address', 'delivery-fees-for-woocommerce' );
         break;
     }
     return $translated_text;
@@ -196,7 +196,7 @@ function dfwc_shipping_field_strings3( $translated_text, $text ) {
 function dfwc_shipping_field_strings4( $translated_text, $text ) {
     switch ( $translated_text ) {
     case 'Shipping' :
-        $translated_text = __( 'Delivery', 'dfwc' );
+        $translated_text = __( 'Delivery', 'delivery-fees-for-woocommerce' );
         break;
     }
     return $translated_text;
@@ -213,7 +213,7 @@ function dfwc_shipping_field_strings4( $translated_text, $text ) {
 function dfwc_strings_translation( $translated_text, $text ) {
     switch ( $translated_text ) {
     case 'Ship to a different address?' :
-        $translated_text =  __( 'Deliver to a different address?', 'dfwc' );
+        $translated_text =  __( 'Deliver to a different address?', 'delivery-fees-for-woocommerce' );
         break;
     }
     return $translated_text;
@@ -230,7 +230,7 @@ function dfwc_strings_translation( $translated_text, $text ) {
  * @return string
  */
 function dfwc_delivery_text( $package_name, $num, $package ) {
-    return sprintf( _nx( 'Delivery', 'Delivery %d', ( $num + 1 ), 'shipping packages', 'dfwc' ), ( $num + 1 ) );
+    return sprintf( _nx( 'Delivery', 'Delivery %d', ( $num + 1 ), 'shipping packages', 'delivery-fees-for-woocommerce' ), ( $num + 1 ) );
 }
 
 /**
