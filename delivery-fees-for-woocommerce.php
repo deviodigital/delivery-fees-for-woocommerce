@@ -7,16 +7,18 @@
  * @package           DFWC
  *
  * @wordpress-plugin
- * Plugin Name:       Delivery Fees for WooCommerce
- * Plugin URI:        https://www.deviodigital.com/delivery-fees-for-woocommerce
- * Description:       Adds a custom shipping method to WooCommerce for delivery services.
- * Version:           1.4
- * Author:            Devio Digital
- * Author URI:        https://www.deviodigital.com
- * License:           GPL-2.0+
- * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
- * Text Domain:       delivery-fees-for-woocommerce
- * Domain Path:       /languages
+ * Plugin Name:          Delivery Fees for WooCommerce
+ * Plugin URI:           https://www.deviodigital.com/delivery-fees-for-woocommerce
+ * Description:          Adds a custom shipping method to WooCommerce for delivery services.
+ * Version:              1.4
+ * Author:               Devio Digital
+ * Author URI:           https://www.deviodigital.com
+ * License:              GPL-2.0+
+ * License URI:          http://www.gnu.org/licenses/gpl-2.0.txt
+ * Text Domain:          delivery-fees-for-woocommerce
+ * Domain Path:          /languages
+ * WC requires at least: 3.5.0
+ * WC tested up to:      4.9.0
  */
 
 // If this file is called directly, abort.
