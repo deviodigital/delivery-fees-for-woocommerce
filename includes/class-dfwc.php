@@ -69,7 +69,7 @@ class DFWC {
 	public function __construct() {
 
 		$this->plugin_name = 'delivery-fees-for-woocommerce';
-		$this->version     = '1.4';
+		$this->version     = '1.4.1';
 
 		if ( defined( 'DFWC_VERSION' ) ) {
 			$this->version = DFWC_VERSION;

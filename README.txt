@@ -3,8 +3,8 @@ Contributors: deviodigital
 Donate link: https://www.deviodigital.com
 Tags: woocommerce, delivery, delivery-fees, courier, shipping, shipping-fees
 Requires at least: 3.0.1
-Tested up to: 5.6
-Stable tag: 1.4
+Tested up to: 5.8
+Stable tag: 1.4.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -68,6 +68,9 @@ Learn more at [Delivery Drivers for WooCommerce](https://www.wordpress.org/plugi
 4. Order details in WordPress dashboard with "Delivery" instead of "Shipping"
 
 == Changelog ==
+
+= 1.4.1 =
+*   Updated textdomain to use the full plugin slug `delivery-fees-for-woocommerce` in multiple files
 
 = 1.4 =
 *   Added new Spanish translation in `languages/dfwc-es_ES.pot`

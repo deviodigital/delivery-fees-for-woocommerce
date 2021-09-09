@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.4.1
+*   Updated textdomain to use the full plugin slug `delivery-fees-for-woocommerce` in multiple files
+
 ## 1.4
 *   Added new Spanish translation in `languages/dfwc-es_ES.pot`
 *   Added new French translation in `languages/dfwc-fr_FR.pot`
