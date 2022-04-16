@@ -27,7 +27,7 @@ if ( ! function_exists( 'is_rest' ) ) {
         $prefix = rest_get_url_prefix( );
         if ( defined( 'REST_REQUEST' ) && REST_REQUEST // (#1)
             || isset( $_GET['rest_route'] ) // (#2)
-                && strpos( trim( $_GET['rest_route'], '\\/' ), $prefix , 0 ) === 0 )
+                && strpos( trim( filter_input( INPUT_GET, 'rest_route' ), '\\/' ), $prefix , 0 ) === 0 )
             return true;
 
         // (#3)
