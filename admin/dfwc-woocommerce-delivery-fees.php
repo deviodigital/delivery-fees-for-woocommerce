@@ -138,7 +138,6 @@ add_action( 'woocommerce_after_order_itemmeta', 'dfwc_change_shipping_text_on_wo
  *
  * @since  1.0
  * @param  array $translated_text
- * @param  [type] $text
  * @return void
  */
 function dfwc_shipping_field_strings( $translated_text ) {
@@ -155,7 +154,6 @@ function dfwc_shipping_field_strings( $translated_text ) {
  *
  * @since  1.0
  * @param  array $translated_text
- * @param  string $text
  * @return string
  */
 function dfwc_shipping_field_strings2( $translated_text ) {
@@ -171,9 +169,8 @@ function dfwc_shipping_field_strings2( $translated_text ) {
  * Change the Shipping address checkout label.
  *
  * @since  1.0
- * @param  [type] $translated_text
- * @param  [type] $text
- * @return void
+ * @param  array $translated_text
+ * @return string
  */
 function dfwc_shipping_field_strings3( $translated_text ) {
     switch ( $translated_text ) {
@@ -189,7 +186,6 @@ function dfwc_shipping_field_strings3( $translated_text ) {
  *
  * @since  1.0
  * @param  array $translated_text
- * @param  string $text
  * @return void
  */
 function dfwc_shipping_field_strings4( $translated_text ) {
@@ -206,10 +202,9 @@ function dfwc_shipping_field_strings4( $translated_text ) {
  *
  * @since  1.0
  * @param  array $translated_text
- * @param  string $text
  * @return string
  */
-function dfwc_strings_translation( $translated_text, $text ) {
+function dfwc_strings_translation( $translated_text ) {
     switch ( $translated_text ) {
     case 'Ship to a different address?' :
         $translated_text =  esc_attr__( 'Deliver to a different address?', 'delivery-fees-for-woocommerce' );
@@ -224,10 +219,9 @@ function dfwc_strings_translation( $translated_text, $text ) {
  *
  * @since  1.0
  * @param  $num
- * @param  $package
  * @return string
  */
-function dfwc_delivery_text( $num, $package ) {
+function dfwc_delivery_text( $num ) {
     return sprintf( _nx( 'Delivery', 'Delivery %d', ( $num + 1 ), 'shipping packages', 'delivery-fees-for-woocommerce' ), ( $num + 1 ) );
 }
 
@@ -264,7 +258,7 @@ function dfwc_change_shipping_text() {
             if ( 'dfwc' == $chosen_methods[0] ) {
                 add_filter( 'gettext', 'dfwc_shipping_field_strings', 99, 1 );
                 add_filter( 'gettext', 'dfwc_shipping_field_strings2', 99, 1 );
-                add_filter( 'gettext', 'dfwc_strings_translation', 99, 2 );
+                add_filter( 'gettext', 'dfwc_strings_translation', 99, 1 );
                 add_filter( 'woocommerce_shipping_package_name' , 'dfwc_delivery_text', 99, 2 );
                 add_filter( 'woocommerce_cart_shipping_method_full_label', 'dfwc_remove_shipping_label', 99, 1 );
                 add_filter( 'gettext', 'dfwc_translate_reply' );
