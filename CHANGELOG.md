@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.5.0
+*   Updated various security related issues found with [Codacy](https://codacy.com) throughout multiple files in the plugin
+
 ## 1.4.1
 *   Updated textdomain to use the full plugin slug `delivery-fees-for-woocommerce` in multiple files
 

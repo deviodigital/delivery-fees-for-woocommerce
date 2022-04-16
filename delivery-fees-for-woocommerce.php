@@ -10,7 +10,7 @@
  * Plugin Name:          Delivery Fees for WooCommerce
  * Plugin URI:           https://www.deviodigital.com/delivery-fees-for-woocommerce
  * Description:          Adds a custom shipping method to WooCommerce for delivery services.
- * Version:              1.4.1
+ * Version:              1.5.0
  * Author:               Devio Digital
  * Author URI:           https://www.deviodigital.com
  * License:              GPL-2.0+
@@ -29,7 +29,7 @@ if ( ! defined( 'WPINC' ) ) {
 /**
  * Current plugin version.
  */
-define( 'DFWC_VERSION', '1.4.1' );
+define( 'DFWC_VERSION', '1.5.0' );
 
 /**
  * The code that runs during plugin activation.
