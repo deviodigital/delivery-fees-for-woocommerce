@@ -118,7 +118,7 @@ function dfwc_change_shipping_text_on_woocommerce_edit_order() {
     $shipping_method_id = '';
 
     // Iterating through order shipping items.
-    foreach( $order->get_items( 'shipping' ) as $item_id => $shipping_item_obj ) {
+    foreach( $order->get_items( 'shipping' ) as $shipping_item_obj ) {
         $shipping_method_id = $shipping_item_obj->get_method_id();
     }
 
