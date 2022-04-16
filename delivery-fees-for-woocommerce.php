@@ -23,7 +23,7 @@
 
 // If this file is called directly, abort.
 if ( ! defined( 'WPINC' ) ) {
-	die;
+	wp_die();
 }
 
 /**
@@ -88,11 +88,13 @@ function dfwc_settings_link( $links ) {
 	// Get GO PRO link.
 	$pro_link = '<a href="https://deviodigital.com/product/delivery-fees-for-woocommerce-pro/" target="_blank" style="font-weight:700;">' . esc_attr__( 'Go Pro', 'delivery-fees-for-woocommerce' ) . '</a>';
 
-	// Add GO PRO link.
+	// Add 'GO PRO' link.
 	if ( ! function_exists( 'run_dfwc_pro' ) ) {
 		array_unshift( $links, $pro_link );
-	} else {
-		// Add Settings link.
+	}
+
+	// Add 'Settings' link.
+	if ( function_exists( 'run_dfwc_pro' ) ) {
 		array_unshift( $links, $settings_link );
 	}
 
@@ -137,7 +139,7 @@ add_action( 'admin_init', 'dfwc_check_pro_version' );
  * @since 2.9
  */
 function dfwc_update_dfwc_pro_notice() {
-	$dfwc_orders = '<a href="https://www.deviodigital.com/my-account/orders/" target="_blank">' . __( 'Orders', 'delivery-fees-for-woocommerce' ) . '</a>';
+	$dfwc_orders = '<a href="https://www.deviodigital.com/my-account/orders/" target="_blank">' . esc_attr__( 'Orders', 'delivery-fees-for-woocommerce' ) . '</a>';
 	$error       = sprintf( esc_html__( 'There is a new version of DFWC Pro available. Download your copy from the %1$s page on Devio Digital.', 'delivery-fees-for-woocommerce' ), $dfwc_orders );
 	echo '<div class="notice notice-info"><p>' . $error . '</p></div>';
 }
