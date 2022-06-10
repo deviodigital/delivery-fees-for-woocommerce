@@ -2,9 +2,10 @@
 /**
  * The plugin bootstrap file
  *
- * @link              https://www.deviodigital.com
- * @since             1.0.0
- * @package           DFWC
+ * @package DFWC
+ * @author  Devio Digital <contact@deviodigital.com>
+ * @license GPL-2.0+ http://www.gnu.org/licenses/gpl-2.0.txt
+ * @link    https://www.deviodigital.com
  *
  * @wordpress-plugin
  * Plugin Name:          Delivery Fees for WooCommerce
@@ -23,7 +24,7 @@
 
 // If this file is called directly, abort.
 if ( ! defined( 'WPINC' ) ) {
-	wp_die();
+    wp_die();
 }
 
 /**
@@ -34,19 +35,23 @@ define( 'DFWC_VERSION', '1.5.0' );
 /**
  * The code that runs during plugin activation.
  * This action is documented in includes/class-dfwc-activator.php
+ * 
+ * @return void
  */
 function activate_dfwc() {
-	require_once plugin_dir_path( __FILE__ ) . 'includes/class-dfwc-activator.php';
-	DFWC_Activator::activate();
+    require_once plugin_dir_path( __FILE__ ) . 'includes/class-dfwc-activator.php';
+    DFWC_Activator::activate();
 }
 
 /**
  * The code that runs during plugin deactivation.
  * This action is documented in includes/class-dfwc-deactivator.php
+ * 
+ * @return void
  */
 function deactivate_dfwc() {
-	require_once plugin_dir_path( __FILE__ ) . 'includes/class-dfwc-deactivator.php';
-	DFWC_Deactivator::deactivate();
+    require_once plugin_dir_path( __FILE__ ) . 'includes/class-dfwc-deactivator.php';
+    DFWC_Deactivator::deactivate();
 }
 
 register_activation_hook( __FILE__, 'activate_dfwc' );
@@ -65,12 +70,13 @@ require plugin_dir_path( __FILE__ ) . 'includes/class-dfwc.php';
  * then kicking off the plugin from this point in the file does
  * not affect the page life cycle.
  *
- * @since    1.0.0
+ * @since  1.0.0
+ * @return void
  */
 function run_dfwc() {
 
-	$plugin = new DFWC();
-	$plugin->run();
+    $plugin = new DFWC();
+    $plugin->run();
 
 }
 run_dfwc();
@@ -78,27 +84,28 @@ run_dfwc();
 /**
  * Add Go Pro link on plugin page
  *
- * @since 1.0.0
- * @param array $links an array of links related to the plugin.
- * @return array updatead array of links related to the plugin.
+ * @param array $links - an array of links related to the plugin.
+ * 
+ * @since  1.0.0
+ * @return array
  */
 function dfwc_settings_link( $links ) {
-	// Get Settings link.
-	$settings_link = '<a href="admin.php?page=wc-settings&tab=dfwc">' . esc_attr__( 'Settings', 'delivery-fees-for-woocommerce' ) . '</a>';
-	// Get GO PRO link.
-	$pro_link = '<a href="https://deviodigital.com/product/delivery-fees-for-woocommerce-pro/" target="_blank" style="font-weight:700;">' . esc_attr__( 'Go Pro', 'delivery-fees-for-woocommerce' ) . '</a>';
+    // Get Settings link.
+    $settings_link = '<a href="admin.php?page=wc-settings&tab=dfwc">' . esc_attr__( 'Settings', 'delivery-fees-for-woocommerce' ) . '</a>';
+    // Get GO PRO link.
+    $pro_link = '<a href="https://deviodigital.com/product/delivery-fees-for-woocommerce-pro/" target="_blank" style="font-weight:700;">' . esc_attr__( 'Go Pro', 'delivery-fees-for-woocommerce' ) . '</a>';
 
-	// Add 'GO PRO' link.
-	if ( ! function_exists( 'run_dfwc_pro' ) ) {
-		array_unshift( $links, $pro_link );
-	}
+    // Add 'GO PRO' link.
+    if ( ! function_exists( 'run_dfwc_pro' ) ) {
+        array_unshift( $links, $pro_link );
+    }
 
-	// Add 'Settings' link.
-	if ( function_exists( 'run_dfwc_pro' ) ) {
-		array_unshift( $links, $settings_link );
-	}
+    // Add 'Settings' link.
+    if ( function_exists( 'run_dfwc_pro' ) ) {
+        array_unshift( $links, $settings_link );
+    }
 
-	return $links;
+    return $links;
 }
 
 $pluginname = plugin_basename( __FILE__ );
@@ -112,34 +119,36 @@ add_filter( "plugin_action_links_$pluginname", 'dfwc_settings_link' );
  * be a notice added to the admin screen letting the user know there's a new
  * version of the DFWC Pro plugin available.
  *
- * @since 1.4
+ * @since  1.4
+ * @return void
  */
 function dfwc_check_pro_version() {
-	// Only run if DFWC Pro is active.
-	if ( function_exists( 'dfwc_pro_all_settings' ) ) {
-		// Check if DFWC Pro version is defined.
-		if ( ! defined( 'DFWC_PRO_VERSION' ) ) {
-			define( 'DFWC_PRO_VERSION', 0 ); // default to zero.
-		}
-		// Set pro version number.
-		$pro_version = DFWC_PRO_VERSION;
-		// Check pro version number.
-		if ( '0' == $pro_version || $pro_version < '1.3' ) {
-			// Add DFWC Pro version upgrade notice to admin notices.
-			add_action( 'admin_notices', 'dfwc_update_dfwc_pro_notice' );
-		}
-	}
+    // Only run if DFWC Pro is active.
+    if ( function_exists( 'dfwc_pro_all_settings' ) ) {
+        // Check if DFWC Pro version is defined.
+        if ( ! defined( 'DFWC_PRO_VERSION' ) ) {
+            define( 'DFWC_PRO_VERSION', 0 ); // default to zero.
+        }
+        // Set pro version number.
+        $pro_version = DFWC_PRO_VERSION;
+        // Check pro version number.
+        if ( '0' == $pro_version || $pro_version < '1.3' ) {
+            // Add DFWC Pro version upgrade notice to admin notices.
+            add_action( 'admin_notices', 'dfwc_update_dfwc_pro_notice' );
+        }
+    }
 }
 add_action( 'admin_init', 'dfwc_check_pro_version' );
 
 /**
  * Error notice - Runs if DFWC Pro is out of date.
  *
- * @see dfwc_check_pro_version()
- * @since 2.9
+ * @see    dfwc_check_pro_version()
+ * @since  2.9
+ * @return string
  */
 function dfwc_update_dfwc_pro_notice() {
-	$dfwc_orders = '<a href="https://www.deviodigital.com/my-account/orders/" target="_blank">' . esc_attr__( 'Orders', 'delivery-fees-for-woocommerce' ) . '</a>';
-	$error       = sprintf( esc_html__( 'There is a new version of DFWC Pro available. Download your copy from the %1$s page on Devio Digital.', 'delivery-fees-for-woocommerce' ), $dfwc_orders );
-	echo '<div class="notice notice-info"><p>' . $error . '</p></div>';
+    $dfwc_orders = '<a href="https://www.deviodigital.com/my-account/orders/" target="_blank">' . esc_attr__( 'Orders', 'delivery-fees-for-woocommerce' ) . '</a>';
+    $error       = sprintf( esc_html__( 'There is a new version of DFWC Pro available. Download your copy from the %1$s page on Devio Digital.', 'delivery-fees-for-woocommerce' ), $dfwc_orders );
+    echo '<div class="notice notice-info"><p>' . $error . '</p></div>';
 }

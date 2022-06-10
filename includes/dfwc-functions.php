@@ -3,11 +3,12 @@
 /**
  * The file that defines the core helper functions
  *
- * @link       https://www.deviodigital.com
- * @since      1.0.0
- *
  * @package    DFWC
  * @subpackage DFWC/includes
+ * @author     Devio Digital <contact@deviodigital.com>
+ * @license    GPL-2.0+ http://www.gnu.org/licenses/gpl-2.0.txt
+ * @link       https://www.deviodigital.com
+ * @since      1.0.0
  */
 
 if ( ! function_exists( 'is_rest' ) ) {
@@ -20,14 +21,14 @@ if ( ! function_exists( 'is_rest' ) ) {
      *          Also supports WP installations in subfolders
      * 
      * @author matzeeable
+     * @since  1.2
      * @return boolean
-     * @since 1.2
      */
     function is_rest() {
         $prefix = rest_get_url_prefix( );
         if ( defined( 'REST_REQUEST' ) && REST_REQUEST // (#1)
             || isset( $_GET['rest_route'] ) // (#2)
-                && strpos( trim( filter_input( INPUT_GET, 'rest_route' ), '\\/' ), $prefix , 0 ) === 0 )
+                && strpos( trim( filter_input( INPUT_GET, 'rest_route' ), '\\/' ), $prefix, 0 ) === 0 )
             return true;
 
         // (#3)

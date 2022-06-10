@@ -2,19 +2,21 @@
 /**
  * The delivery fee functionality of the plugin.
  *
- * @link       https://www.deviodigital.com
- * @since      1.0.0
- *
  * @package    DFWC
  * @subpackage DFWC/admin
+ * @author     Devio Digital <contact@deviodigital.com>
+ * @license    GPL-2.0+ http://www.gnu.org/licenses/gpl-2.0.txt
+ * @link       https://www.deviodigital.com
+ * @since      1.0.0
  */
 
 /**
  * Delivery Fee Override
  *
- * @since     1.0
- * @param     array $rates
- * @return    void
+ * @param array $rates 
+ * 
+ * @since  1.0
+ * @return void
  */
 function dfwc_package_rate_override( $rates ) {
 
@@ -51,7 +53,8 @@ add_filter( 'woocommerce_package_rates', 'dfwc_package_rate_override', 100, 1 );
 /**
  * Remove Shipping Label from Cart/Checkout.
  *
- * @param  string $label
+ * @param string $label
+ * 
  * @return string
  */
 function dfwc_remove_shipping_label( $label ) {
@@ -61,6 +64,9 @@ function dfwc_remove_shipping_label( $label ) {
 
 /**
  * Change "Delivery" label to "FREE" if cost is zero.
+ * 
+ * @param string $label 
+ * @param object $method 
  * 
  * @since  1.0
  * @return string
@@ -79,7 +85,10 @@ add_filter( 'woocommerce_cart_shipping_method_full_label', 'dfwc_free_delivery_l
 /**
  * Change "Shipping" text to "Delivery" on WC pages.
  * 
- * @since 1.0
+ * @param int $order_id 
+ * 
+ * @since  1.0
+ * @return void
  */
 function dfwc_change_shipping_text_on_woocommerce_pages( $order_id ) {
 
@@ -90,7 +99,7 @@ function dfwc_change_shipping_text_on_woocommerce_pages( $order_id ) {
     $shipping_method_id = '';
 
     // Iterating through order shipping items.
-    foreach( $order->get_items( 'shipping' ) as $shipping_item_obj ) {
+    foreach ( $order->get_items( 'shipping' ) as $shipping_item_obj ) {
         $shipping_method_id = $shipping_item_obj->get_method_id();
     }
 
@@ -107,7 +116,8 @@ add_action( 'woocommerce_view_order', 'dfwc_change_shipping_text_on_woocommerce_
 /**
  * Change "Shipping" text to "Delivery" on WooCommerce pages.
  * 
- * @since 1.0
+ * @since  1.0
+ * @return void
  */
 function dfwc_change_shipping_text_on_woocommerce_edit_order() {
 
@@ -118,7 +128,7 @@ function dfwc_change_shipping_text_on_woocommerce_edit_order() {
     $shipping_method_id = '';
 
     // Iterating through order shipping items.
-    foreach( $order->get_items( 'shipping' ) as $shipping_item_obj ) {
+    foreach ( $order->get_items( 'shipping' ) as $shipping_item_obj ) {
         $shipping_method_id = $shipping_item_obj->get_method_id();
     }
 
@@ -136,9 +146,10 @@ add_action( 'woocommerce_after_order_itemmeta', 'dfwc_change_shipping_text_on_wo
 /**
  * Change the Shipping Address checkout label.
  *
+ * @param array $translated_text 
+ * 
  * @since  1.0
- * @param  array $translated_text
- * @return void
+ * @return array
  */
 function dfwc_shipping_field_strings( $translated_text ) {
     switch ( $translated_text ) {
@@ -152,8 +163,9 @@ function dfwc_shipping_field_strings( $translated_text ) {
 /**
  * Change Shipping: to Delivery:
  *
+ * @param array $translated_text 
+ * 
  * @since  1.0
- * @param  array $translated_text
  * @return string
  */
 function dfwc_shipping_field_strings2( $translated_text ) {
@@ -168,8 +180,9 @@ function dfwc_shipping_field_strings2( $translated_text ) {
 /**
  * Change the Shipping address checkout label.
  *
+ * @param array $translated_text 
+ * 
  * @since  1.0
- * @param  array $translated_text
  * @return string
  */
 function dfwc_shipping_field_strings3( $translated_text ) {
@@ -184,8 +197,9 @@ function dfwc_shipping_field_strings3( $translated_text ) {
 /**
  * Change the Shipping address checkout label.
  *
+ * @param array $translated_text 
+ * 
  * @since  1.0
- * @param  array $translated_text
  * @return void
  */
 function dfwc_shipping_field_strings4( $translated_text ) {
@@ -200,8 +214,9 @@ function dfwc_shipping_field_strings4( $translated_text ) {
 /**
  * Change the Ship to a different address text.
  *
+ * @param array $translated_text 
+ *
  * @since  1.0
- * @param  array $translated_text
  * @return string
  */
 function dfwc_strings_translation( $translated_text ) {
@@ -214,11 +229,11 @@ function dfwc_strings_translation( $translated_text ) {
 }
 
 /**
- *
  * Function to replace shipping text to delivery text
  *
+ * @param int $num 
+ * 
  * @since  1.0
- * @param  $num
  * @return string
  */
 function dfwc_delivery_text( $num ) {
@@ -228,8 +243,9 @@ function dfwc_delivery_text( $num ) {
 /**
  * Change the string "Shipping" to "Delivery" on Order Received page.
  *
+ * @param string $translated 
+ * 
  * @since  1.0
- * @param  string $translated
  * @return string
  */
 function dfwc_translate_reply( $translated ) {
@@ -253,13 +269,13 @@ function dfwc_change_shipping_text() {
         // Chosen shipping method.
         $chosen_methods = WC()->session->get( 'chosen_shipping_methods' );
         // Check chosen shipping method.
-        if ( FALSE != $chosen_methods[0] ) {
+        if ( false != $chosen_methods[0] ) {
             // Translation for DFWC shipping method.
             if ( 'dfwc' == $chosen_methods[0] ) {
                 add_filter( 'gettext', 'dfwc_shipping_field_strings', 99, 1 );
                 add_filter( 'gettext', 'dfwc_shipping_field_strings2', 99, 1 );
                 add_filter( 'gettext', 'dfwc_strings_translation', 99, 1 );
-                add_filter( 'woocommerce_shipping_package_name' , 'dfwc_delivery_text', 99, 2 );
+                add_filter( 'woocommerce_shipping_package_name', 'dfwc_delivery_text', 99, 2 );
                 add_filter( 'woocommerce_cart_shipping_method_full_label', 'dfwc_remove_shipping_label', 99, 1 );
                 add_filter( 'gettext', 'dfwc_translate_reply' );
                 add_filter( 'ngettext', 'dfwc_translate_reply' );
@@ -272,12 +288,13 @@ add_action( 'init', 'dfwc_change_shipping_text', 99 );
 /**
  * Translate 'Ship to' text on WooCommerce Edit Orders screen
  *
- * @param  string $translated
+ * @param string $translated 
+ * 
  * @return string
  */
 function dfwc_translate_reply_ship_to( $translated ) {
-	$translated = str_ireplace( 'Ship to', 'Deliver to', $translated );
-	return $translated;
+    $translated = str_ireplace( 'Ship to', 'Deliver to', $translated );
+    return $translated;
 }
 add_filter( 'gettext', 'dfwc_translate_reply_ship_to' );
 add_filter( 'ngettext', 'dfwc_translate_reply_ship_to' );
