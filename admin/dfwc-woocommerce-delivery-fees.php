@@ -53,7 +53,7 @@ add_filter( 'woocommerce_package_rates', 'dfwc_package_rate_override', 100, 1 );
 /**
  * Remove Shipping Label from Cart/Checkout.
  *
- * @param string $label
+ * @param string $label 
  * 
  * @return string
  */
@@ -170,7 +170,7 @@ function dfwc_shipping_field_strings( $translated_text ) {
  */
 function dfwc_shipping_field_strings2( $translated_text ) {
     switch ( $translated_text ) {
-        case 'Shipping:' :
+    case 'Shipping:' :
         $translated_text = esc_attr__( 'Delivery:', 'delivery-fees-for-woocommerce' );
         break;
     }

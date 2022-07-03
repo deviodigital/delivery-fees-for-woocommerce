@@ -19,13 +19,13 @@
  * For more information, see the following discussion:
  * https://github.com/tommcfarlin/WordPress-Plugin-Boilerplate/pull/123#issuecomment-28541913
  *
- * @link       https://www.deviodigital.com
- * @since      1.0.0
- *
- * @package    DFWC
+ * @package DFWC
+ * @author  Devio Digital <contact@deviodigital.com>
+ * @license GPL-2.0+ http://www.gnu.org/licenses/gpl-2.0.txt
+ * @link    https://www.deviodigital.com
  */
 
 // If uninstall not called from WordPress, then exit.
 if ( ! defined( 'WP_UNINSTALL_PLUGIN' ) ) {
-	wp_die();
+    wp_die();
 }
