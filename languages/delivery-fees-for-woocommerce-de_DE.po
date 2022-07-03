@@ -1,0 +1,123 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Delivery Fees for WooCommerce\n"
+"POT-Creation-Date: 2022-07-03 14:15-0400\n"
+"PO-Revision-Date: 2022-07-03 14:17-0400\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: de_DE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.1\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: delivery-fees-for-woocommerce.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
+"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.min.js\n"
+
+#: admin/dfwc-woocommerce-delivery-fees.php:78
+msgid "FREE"
+msgstr "KOSTENLOS"
+
+#: admin/dfwc-woocommerce-delivery-fees.php:157
+msgid "Delivery Address"
+msgstr "Lieferadresse"
+
+#: admin/dfwc-woocommerce-delivery-fees.php:174
+msgid "Delivery:"
+msgstr "Lieferumfang:"
+
+#: admin/dfwc-woocommerce-delivery-fees.php:191
+msgid "Delivery address"
+msgstr "Lieferadresse"
+
+#: admin/dfwc-woocommerce-delivery-fees.php:208
+#: admin/dfwc-woocommerce-shipping-method.php:77
+msgid "Delivery"
+msgstr "Lieferung"
+
+#: admin/dfwc-woocommerce-delivery-fees.php:225
+msgid "Deliver to a different address?"
+msgstr "An eine andere Adresse liefern?"
+
+#: admin/dfwc-woocommerce-delivery-fees.php:240
+#, php-format
+msgctxt "shipping packages"
+msgid "Delivery"
+msgid_plural "Delivery %d"
+msgstr[0] "Lieferung"
+msgstr[1] "Lieferung %d"
+
+#: admin/dfwc-woocommerce-shipping-method.php:41
+msgid "Delivery Fees"
+msgstr "Lieferkosten"
+
+#: admin/dfwc-woocommerce-shipping-method.php:42
+msgid "Add your custom delivery fee for this shipping zone"
+msgstr ""
+"Fügen Sie Ihre individuelle Versandgebühr für diese Versandzone hinzu"
+
+#: admin/dfwc-woocommerce-shipping-method.php:51
+msgid "DFWC Delivery Fees"
+msgstr "DFWC Lieferkosten"
+
+#: admin/dfwc-woocommerce-shipping-method.php:74
+msgid "Title"
+msgstr "Titel"
+
+#: admin/dfwc-woocommerce-shipping-method.php:80
+msgid "Fee"
+msgstr "Gebühr"
+
+#: admin/dfwc-woocommerce-shipping-method.php:86
+msgid "Free delivery minimum"
+msgstr "Kostenlose Lieferung mindestens"
+
+#: delivery-fees-for-woocommerce.php:94
+msgid "Settings"
+msgstr "Einstellungen"
+
+#: delivery-fees-for-woocommerce.php:96
+msgid "Go Pro"
+msgstr "Pro erwerben"
+
+#: delivery-fees-for-woocommerce.php:151
+msgid "Orders"
+msgstr "Bestellungen"
+
+#: delivery-fees-for-woocommerce.php:152
+#, php-format
+msgid ""
+"There is a new version of DFWC Pro available. Download your copy from the "
+"%1$s page on Devio Digital."
+msgstr ""
+"Es ist eine neue Version von DFWC Pro verfügbar. Laden Sie Ihre Kopie von "
+"der %1$s-Seite auf Devio Digital herunter."
+
+#. Plugin Name of the plugin/theme
+msgid "Delivery Fees for WooCommerce"
+msgstr "Liefergebühren für WooCommerce"
+
+#. Plugin URI of the plugin/theme
+msgid "https://www.deviodigital.com/delivery-fees-for-woocommerce"
+msgstr "https://www.deviodigital.com/delivery-fees-for-woocommerce"
+
+#. Description of the plugin/theme
+msgid "Adds a custom shipping method to WooCommerce for delivery services."
+msgstr ""
+"Fügt WooCommerce eine benutzerdefinierte Versandmethode für Lieferdienste "
+"hinzu."
+
+#. Author of the plugin/theme
+msgid "Devio Digital"
+msgstr "Devio Digital"
+
+#. Author URI of the plugin/theme
+msgid "https://www.deviodigital.com"
+msgstr "https://www.deviodigital.com"
