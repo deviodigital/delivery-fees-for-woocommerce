@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.5.1
+*   Added new German translation in `languages/dfwc-de_DE.pot`
+*   Added new Afrikaans translation in `languages/dfwc-af.pot`
+*   Updated WordPress Coding Standards in various areas throughout the plugin
+*   General code cleanup in various areas throughout the plugin
+
 ## 1.5.0
 *   Updated various security related issues found with [Codacy](https://codacy.com) throughout multiple files in the plugin
 

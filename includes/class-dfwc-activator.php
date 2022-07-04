@@ -24,7 +24,6 @@
  * @since      1.0.0
  */
 class DFWC_Activator {
-
     /**
      * Run on plugin activation
      *
