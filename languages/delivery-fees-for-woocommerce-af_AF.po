@@ -1,11 +1,11 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Delivery Fees for WooCommerce\n"
-"POT-Creation-Date: 2020-12-27 14:29-0500\n"
-"PO-Revision-Date: 2023-05-28 14:44-0400\n"
+"POT-Creation-Date: 2022-07-03 14:22-0400\n"
+"PO-Revision-Date: 2023-05-28 14:45-0400\n"
 "Last-Translator: \n"
 "Language-Team: \n"
-"Language: it\n"
+"Language: af\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -21,89 +21,87 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.min.js\n"
 
-#: admin/dfwc-woocommerce-delivery-fees.php:73
+#: admin/dfwc-woocommerce-delivery-fees.php:78
 msgid "FREE"
-msgstr "GRATIS"
+msgstr "VRY"
 
-#: admin/dfwc-woocommerce-delivery-fees.php:148
+#: admin/dfwc-woocommerce-delivery-fees.php:157
 msgid "Delivery Address"
-msgstr "Indirizzo Consegna"
+msgstr "Aflewerings adres"
 
-#: admin/dfwc-woocommerce-delivery-fees.php:165
+#: admin/dfwc-woocommerce-delivery-fees.php:174
 msgid "Delivery:"
-msgstr "Consegna:"
+msgstr "Aflewering:"
 
-#: admin/dfwc-woocommerce-delivery-fees.php:182
+#: admin/dfwc-woocommerce-delivery-fees.php:191
 msgid "Delivery address"
-msgstr "Indirizzo di consegna"
+msgstr "Aflewerings adres"
 
-#: admin/dfwc-woocommerce-delivery-fees.php:199
-#: admin/dfwc-woocommerce-shipping-method.php:50
+#: admin/dfwc-woocommerce-delivery-fees.php:208
+#: admin/dfwc-woocommerce-shipping-method.php:77
 msgid "Delivery"
-msgstr "Consegna"
+msgstr "Aflewering"
 
-#: admin/dfwc-woocommerce-delivery-fees.php:216
+#: admin/dfwc-woocommerce-delivery-fees.php:225
 msgid "Deliver to a different address?"
-msgstr "Consegnare a un indirizzo diverso?"
+msgstr "Aflewer by ’n ander adres?"
 
-#: admin/dfwc-woocommerce-delivery-fees.php:233
+#: admin/dfwc-woocommerce-delivery-fees.php:240
 #, php-format
 msgctxt "shipping packages"
 msgid "Delivery"
 msgid_plural "Delivery %d"
-msgstr[0] "Consegna"
-msgstr[1] "Consegna %d"
+msgstr[0] "Aflewering"
+msgstr[1] "Aflewering %d"
 
-#: admin/dfwc-woocommerce-shipping-method.php:23
+#: admin/dfwc-woocommerce-shipping-method.php:41
 msgid "Delivery Fees"
-msgstr "Commissioni di consegna"
+msgstr "Afleweringsfooie"
 
-#: admin/dfwc-woocommerce-shipping-method.php:24
+#: admin/dfwc-woocommerce-shipping-method.php:42
 msgid "Add your custom delivery fee for this shipping zone"
-msgstr ""
-"Aggiungi la tua tariffa di consegna personalizzata per questa zona di "
-"spedizione"
+msgstr "Voeg jou pasgemaakte afleweringsfooi by vir hierdie versendingsone"
 
-#: admin/dfwc-woocommerce-shipping-method.php:33
+#: admin/dfwc-woocommerce-shipping-method.php:51
 msgid "DFWC Delivery Fees"
-msgstr "Commissioni di pubblicazione DFWC"
+msgstr "DFWC Afleweringsfooie"
 
-#: admin/dfwc-woocommerce-shipping-method.php:47
+#: admin/dfwc-woocommerce-shipping-method.php:74
 msgid "Title"
-msgstr "Titolo"
+msgstr "Titel"
 
-#: admin/dfwc-woocommerce-shipping-method.php:53
+#: admin/dfwc-woocommerce-shipping-method.php:80
 msgid "Fee"
-msgstr "Commissione"
+msgstr "Fooi"
 
-#: admin/dfwc-woocommerce-shipping-method.php:59
+#: admin/dfwc-woocommerce-shipping-method.php:86
 msgid "Free delivery minimum"
-msgstr "Consegna gratuita minima"
+msgstr "Gratis aflewering minimum"
 
-#: delivery-fees-for-woocommerce.php:85
+#: delivery-fees-for-woocommerce.php:94
 msgid "Settings"
-msgstr "Impostazioni"
+msgstr "Vertellings"
 
-#: delivery-fees-for-woocommerce.php:87
+#: delivery-fees-for-woocommerce.php:96
 msgid "Go Pro"
-msgstr "Passa a Pro"
+msgstr "Gaan professioneel"
 
-#: delivery-fees-for-woocommerce.php:138
+#: delivery-fees-for-woocommerce.php:151
 msgid "Orders"
-msgstr "Ordini"
+msgstr "Bestellings"
 
-#: delivery-fees-for-woocommerce.php:139
+#: delivery-fees-for-woocommerce.php:152
 #, php-format
 msgid ""
 "There is a new version of DFWC Pro available. Download your copy from the "
 "%1$s page on Devio Digital."
 msgstr ""
-"È disponibile una nuova versione di DFWC Pro. Scarica la tua copia dalla "
-"pagina %1$s su Devio Digital."
+"Daar is ’n nuwe weergawe van DFWC Pro beskikbaar. Laai jou kopie af vanaf "
+"die %1$s-bladsy op Devio Digital."
 
 #. Plugin Name of the plugin/theme
 msgid "Delivery Fees for WooCommerce"
-msgstr "Commissioni di consegna per WooCommerce"
+msgstr "Afleweringsfooie vir WooCommerce"
 
 #. Plugin URI of the plugin/theme
 msgid "https://www.deviodigital.com/delivery-fees-for-woocommerce"
@@ -112,8 +110,8 @@ msgstr "https://www.deviodigital.com/delivery-fees-for-woocommerce"
 #. Description of the plugin/theme
 msgid "Adds a custom shipping method to WooCommerce for delivery services."
 msgstr ""
-"Aggiunge un metodo di spedizione personalizzato a WooCommerce per i servizi "
-"di consegna."
+"Voeg ’n pasgemaakte afleweringsmetode by WooCommerce vir "
+"afleweringsdienste."
 
 #. Author of the plugin/theme
 msgid "Devio Digital"
