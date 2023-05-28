@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.6.0
+*   Updated code for PHP 8.0 compatibility in multiple files throughout the plugin
+*   Updated text strings for localization for translations found in the `languages` folder
+
 ## 1.5.1
 *   Added new German translation in `languages/dfwc-de_DE.pot`
 *   Added new Afrikaans translation in `languages/dfwc-af.pot`
